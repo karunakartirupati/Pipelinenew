@@ -14,6 +14,10 @@ pipeline {
 			when { expression { params.hbp_enable } }
             steps {
 				echo 'Hello world!' 
+				sh """
+				cd /c/Users/tirupati/pipelinenew
+				ll
+				"""
 			}
 			
         }

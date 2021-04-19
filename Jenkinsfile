@@ -14,12 +14,18 @@ pipeline {
 			when { expression { params.hbp_enable } }
             steps {
 				echo 'Hello world!' 
-				sh """
-				ll
-				"""
+				
 			}
 			
         }
     }
+	
+	post {
+        always {
+			echo 'Execution done' 
+                      
+            }
+            
+  }
     
 }

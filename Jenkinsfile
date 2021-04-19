@@ -31,6 +31,9 @@ pipeline {
 	post {
         always {
 			echo 'Execution done' 
+			if (PARAMETER_01.equals("ONE")){
+				return["PARAMETER_01"]
+}
                       
             }
             

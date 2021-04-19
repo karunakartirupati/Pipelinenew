@@ -17,7 +17,7 @@ pipeline {
 				echo 'Inside repo'
 			}			
 				echo 'Hello world!' 
-            }
         }
     }
+    
 }

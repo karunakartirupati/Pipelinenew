@@ -7,20 +7,16 @@ pipeline {
     booleanParam(name: 'hbp_enable', defaultValue: false, description: 'Toggle this value')   
     }
 	
-	stage('Deploying kk image') {
-      when { expression { params.hbp_enable } }
-      
-      steps {        
-        dir ('/c/Users/tirupati/pipelinenew')  {  
-          echo 'Inside repo'
-         }
-      }
-    }
+	
 	
     stages {
-        stage('Stage 1') {
+        stage('Deploying kk image') {
+			when { expression { params.hbp_enable } }
             steps {
-                echo 'Hello world!' 
+			dir ('/c/Users/tirupati/pipelinenew')
+				echo 'Inside repo'
+			}			
+				echo 'Hello world!' 
             }
         }
     }

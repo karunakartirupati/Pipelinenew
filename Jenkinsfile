@@ -30,9 +30,11 @@ pipeline {
 	
 	post {
         always {
+			steps {
 			echo 'Execution done' 
 			if (PARAMETER_01.equals("ONE")){
 				return["PARAMETER_01"]
+			}
 }
                       
             }

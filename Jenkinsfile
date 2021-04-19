@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
 	
 	parameters{
     string(name: 'DOCKERIMAGE', defaultValue: 'imagename', description: 'The target environment' )

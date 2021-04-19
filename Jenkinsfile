@@ -15,7 +15,6 @@ pipeline {
             steps {
 				echo 'Hello world!' 
 				sh """
-				cd /c/Users/tirupati/pipelinenew
 				ll
 				"""
 			}

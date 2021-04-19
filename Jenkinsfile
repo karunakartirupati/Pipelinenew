@@ -1,6 +1,6 @@
 pipeline {
-    agent any 
-	
+    agent any {
+	}
 	parameters{
     string(name: 'DOCKERIMAGE', defaultValue: 'imagename', description: 'The target environment' )
     string(name: 'qapipe', defaultValue: 'dev', description: 'The target environment' )
@@ -13,10 +13,12 @@ pipeline {
         stage('Deploying kk image') {
 			when { expression { params.hbp_enable } }
             steps {
-			dir ('/c/Users/tirupati/pipelinenew')
-				echo 'Inside repo'
-			}			
+				dir ('/c/Users/tirupati/pipelinenew'){
+					echo 'Inside repo'
+				}			
 				echo 'Hello world!' 
+			}
+			
         }
     }
     

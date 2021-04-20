@@ -20,15 +20,14 @@ pipeline {
     stages {
         stage('Deploying kk image') {
 			when { expression { params.hbp_enable } }
-            steps {
-					
-				echo 'Hello world!' 
-				
-			}
-			if (PARAMETER_01.equals("ONE")){
-						return["Karunakar"]
-					}
-			
+            steps {					
+				echo 'Hello world!' 			
+			}		
+        }
+		stage('final stage') {
+			steps {					
+				echo 'Hello Karunakar!' 			
+			}		
         }
     }
 	

@@ -21,7 +21,7 @@ pipeline {
         stage('Deploying kk image') {
 			when { expression { params.hbp_enable } }
             steps {					
-				echo 'Hello world!' 			
+				echo 'Karunakar deploy as Architect!' 			
 			}		
         }
 		stage('final stage') {
